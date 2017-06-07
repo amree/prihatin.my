@@ -3,9 +3,7 @@
   <head>
     <title>Derma.asia</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body class="<%= body_class %> bottom-footer">
@@ -36,6 +34,8 @@
         <p>Designed and built with ♥ using Ruby on Rails</p>
       </section>
     </footer>
+
+    <%= render "javascript" %>
   </body>
 </html>
 </html>
