@@ -1,0 +1,57 @@
+.section-header {
+  padding: 1rem .5rem;
+  top: 0;
+  width: 100%;
+  background: #f8f9fa;
+  color: #667189;
+}
+
+.container.grid-960 {
+  max-width: 98rem;
+}
+
+.container.extra-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-brand {
+  color: #50596c;
+}
+
+.grid-footer {
+  color: #acb3c2;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.bg-gray {
+  background: #f8f9fa;
+  color: #667189;
+  padding: 1rem
+}
+
+.section-footer {
+  margin-top: 3rem;
+}
+
+.bottom-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+@media (min-width: $size-lg) {
+  .container.extra-padding {
+    padding-left: inherit;
+    padding-right: inherit;
+  }
+
+  .section-header {
+    margin-bottom: 3em;
+  }
+}
