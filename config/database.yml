@@ -8,6 +8,7 @@ development:
 
 test:
   <<: *default
+  url:  <%= ENV.fetch("DATABASE_URL_TEST", "") %>
 
 production:
   <<: *default
