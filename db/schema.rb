@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606095652) do
+ActiveRecord::Schema.define(version: 20170614141006) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "slug"
@@ -25,4 +25,27 @@ ActiveRecord::Schema.define(version: 20170606095652) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "donations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "campaign_id"
+    t.decimal "total_amount", precision: 6, scale: 2, default: "0.0"
+    t.decimal "donation_amount", precision: 6, scale: 2, default: "0.0"
+    t.decimal "organizer_amount", precision: 6, scale: 2, default: "0.0"
+    t.decimal "website_amount", precision: 6, scale: 2, default: "0.0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_donations_on_campaign_id"
+  end
+
+  create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "donation_id"
+    t.string "gateway_ref"
+    t.string "state"
+    t.decimal "amount", precision: 6, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["donation_id"], name: "index_payments_on_donation_id"
+  end
+
+  add_foreign_key "donations", "campaigns"
+  add_foreign_key "payments", "donations"
 end
