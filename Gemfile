@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem "billplz-api"
 gem "flutie"
 gem "jbuilder", "~> 2.5"
 gem "mysql2"
