@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "autoprefixer-rails"
 gem "billplz-api"
 gem "delayed_job_active_record"
 gem "flutie"
