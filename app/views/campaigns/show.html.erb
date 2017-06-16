@@ -86,13 +86,16 @@
 
                 <div class="column col-md-12 col-12 main-action">
                   <div class="mobile-space">
-                    <button class="donate btn btn-lg btn-primary">Derma Sekarang</button>
+                    <%= link_to "Derma sekarang",
+                      new_campaign_donation_path(@campaign),
+                      class: "donate btn btn-lg btn-primary"
+                    %>
                   </div>
                 </div>
 
                 <div class="column col-md-12 col-12 secondary-actions">
-                  <button class="reminder btn">Ingatkan</button>
-                  <button class="share btn">Kongsi</button>
+                  <a class="reminder btn">Ingatkan</a>
+                  <a class="share btn">Kongsi</a>
                 </div>
               </div>
             </div>
