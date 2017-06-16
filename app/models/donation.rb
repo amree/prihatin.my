@@ -1,5 +1,5 @@
 class Donation < ApplicationRecord
   belongs_to :campaign
 
-  has_many :payments
+  has_one :payment
 end

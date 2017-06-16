@@ -1,0 +1,19 @@
+<section class="container grid-960 site-content">
+  <div class="columns">
+    <div class="column col-md-6 col-sm-12">
+      <div class="columns">
+        <div class="column col-md-12">
+          <%= simple_form_for [@campaign, @donation] do |f| %>
+            <%= f.input :donation_amount %>
+            <%= f.input :website_amount %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-md-6 col-sm-12">
+      Preview
+    </div>
+  </div>
+</section>

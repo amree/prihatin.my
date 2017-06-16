@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20170614141006) do
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "donation_id"
-    t.string "slug"
     t.string "gateway_reference"
     t.string "state"
     t.decimal "amount", precision: 6, scale: 2
