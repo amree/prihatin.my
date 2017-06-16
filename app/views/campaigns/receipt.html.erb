@@ -1,1 +1,6 @@
-SUCCESS!
+<% if @payment.failed? %>
+  SUCCESS
+<% else %>
+  FAILED
+<% end %>
+

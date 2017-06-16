@@ -88,7 +88,7 @@ class DonationForm
   def callback_url
     [
       ENV.fetch("PUBLIC_URL"),
-      "/callback"
+      callbacks_path
     ].join("")
   end
 end

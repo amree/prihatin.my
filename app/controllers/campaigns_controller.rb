@@ -4,6 +4,10 @@ class CampaignsController < ApplicationController
   end
 
   def receipt
+    id = params.dig("billplz", "id")
+
+    @payment = UpdatePaymentStatusJob.new.perform id
+    @payment = PaymentPresenter.new(@payment)
   end
 
   private
