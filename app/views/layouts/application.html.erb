@@ -9,34 +9,12 @@
   </head>
 
   <body class="<%= body_class %> bottom-footer">
-    <section class="section-header">
-      <section class="container grid-960 extra-padding">
-        <nav class="navbar">
-          <section class="navbar-section">
-            <a href="/" class="navbar-brand">Derma.asia</a>
-          </section>
-          <section class="navbar-section">
-            <a href="https://github.com/picturepan2/spectre" target="_blank" class="btn btn-primary">Masuk</a>
-          </section>
-        </nav>
-      </section>
-    </section>
+    <%= render "header" %>
+    <%= render "flashes" %>
 
     <%= yield %>
 
-    <footer class="section-footer bg-gray">
-      <section class="grid-footer container grid-960">
-        <p>
-        <a href="#">Tentang Derma.asia</a> |
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms & Conditions</a> |
-        <a href="#" target="_blank">Facebook</a> |
-        <a href="#" target="_blank">Twitter</a>
-        </p>
-        <p>Designed and built with ♥ using Ruby on Rails</p>
-      </section>
-    </footer>
-
+    <%= render "footer" %>
     <%= render "javascript" %>
   </body>
 </html>

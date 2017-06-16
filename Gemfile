@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem "autoprefixer-rails"
+gem "devise"
 gem "billplz-api"
 gem "delayed_job_active_record"
 gem "flutie"
