@@ -1,0 +1,24 @@
+<script type="javascript">
+  // https://github.com/turbolinks/turbolinks/issues/221
+  function FBInit() {
+    FB.init({
+      appId: <%= ENV.fetch("FACEBOOK_APP_ID") %>,
+      xfbml: true,
+      version: "v2.8"
+    });
+  };
+
+  $(document).ready(function() {
+    $.getScript("//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8", FBInit);
+  });
+
+  $(document).on('turbolinks:load', function(event) {
+    if (typeof FB !== "undefined" && FB !== null) {
+      FB.XFBML.parse();
+    }
+  });
+
+  $(document).on("turbolinks:before-cache", function() {
+    $('[data-turbolinks-no-cache]').remove();
+  });
+</script>

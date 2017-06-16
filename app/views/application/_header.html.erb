@@ -5,7 +5,18 @@
         <a href="/" class="navbar-brand">Derma.asia</a>
       </section>
       <section class="navbar-section">
-        <a href="https://github.com/picturepan2/spectre" target="_blank" class="btn btn-primary">Masuk</a>
+        <% if user_signed_in? %>
+          <%= link_to "Keluar",
+            destroy_user_session_path,
+            method: :delete,
+            class: "btn btn-link"
+          %>
+        <% else %>
+          <%= link_to "Masuk",
+            user_facebook_omniauth_authorize_path,
+            class: "btn btn-primary"
+          %>
+        <% end %>
       </section>
     </nav>
   </section>

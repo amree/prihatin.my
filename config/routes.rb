@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get "home/index"
+
   resources :callbacks, only: [:create]
   resources :campaigns, only: [:show] do
     resources :donations, only: [:new, :create]
@@ -9,5 +10,10 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: "campaigns#index"
+  devise_for(
+    :users,
+    controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  )
+
+  root to: "home#index"
 end
