@@ -2,9 +2,7 @@ class CreateDonations < ActiveRecord::Migration[5.1]
   def change
     create_table :donations do |t|
       t.references :campaign, foreign_key: true
-      t.decimal :total_amount, precision: 6, scale: 2, default: 0
       t.decimal :donation_amount, precision: 6, scale: 2, default: 0
-      t.decimal :organizer_amount, precision: 6, scale: 2, default: 0
       t.decimal :website_amount, precision: 6, scale: 2, default: 0
 
       t.timestamps

@@ -27,9 +27,7 @@ ActiveRecord::Schema.define(version: 20170614141006) do
 
   create_table "donations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "campaign_id"
-    t.decimal "total_amount", precision: 6, scale: 2, default: "0.0"
     t.decimal "donation_amount", precision: 6, scale: 2, default: "0.0"
-    t.decimal "organizer_amount", precision: 6, scale: 2, default: "0.0"
     t.decimal "website_amount", precision: 6, scale: 2, default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,7 +36,8 @@ ActiveRecord::Schema.define(version: 20170614141006) do
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "donation_id"
-    t.string "gateway_ref"
+    t.string "slug"
+    t.string "gateway_reference"
     t.string "state"
     t.decimal "amount", precision: 6, scale: 2
     t.datetime "created_at", null: false
