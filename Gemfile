@@ -18,7 +18,6 @@ gem "rails", "~> 5.1.1"
 gem "sassc-rails"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
-gem "turbolinks", "~> 5"
 gem "tzinfo-data"
 gem "uglifier", ">= 1.3.0"
 

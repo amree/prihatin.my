@@ -1,24 +1,21 @@
-<script type="javascript">
-  // https://github.com/turbolinks/turbolinks/issues/221
-  function FBInit() {
+<script>
+  window.fbAsyncInit = function() {
     FB.init({
-      appId: <%= ENV.fetch("FACEBOOK_APP_ID") %>,
+      appId: "<%= ENV.fetch('FACEBOOK_APP_ID') %>",
+      autoLogAppEvents : true,
       xfbml: true,
-      version: "v2.8"
+      version: "v2.9"
     });
+
+    FB.AppEvents.logPageView();
   };
 
-  $(document).ready(function() {
-    $.getScript("//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8", FBInit);
-  });
-
-  $(document).on('turbolinks:load', function(event) {
-    if (typeof FB !== "undefined" && FB !== null) {
-      FB.XFBML.parse();
-    }
-  });
-
-  $(document).on("turbolinks:before-cache", function() {
-    $('[data-turbolinks-no-cache]').remove();
-  });
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, "script", "facebook-jssdk"));
 </script>
+
