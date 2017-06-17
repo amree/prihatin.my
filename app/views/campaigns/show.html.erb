@@ -22,16 +22,19 @@
         <div class="column col-md-12 col-2 organizer">
           <div class="columns mobile-space">
             <div class="column col-md-4 col-12 avatar-container">
-              <a href="#">
+              <%= link_to @campaign.facebook_url, target: "_blank" do %>
                 <figure class="avatar">
                   <%= image_tag @campaign.organizer.image %>
                 </figure>
-              </a>
+              <% end %>
             </div>
             <div class="column col-md-8 col-12 name">
               <span>
                 <%= t(".by") %>
-                <%= @campaign.organizer.name %>
+                <%= link_to @campaign.organizer.name,
+                  @campaign.facebook_url,
+                  target: "_blank"
+                %>
               </span>
             </div>
           </div>

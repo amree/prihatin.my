@@ -31,6 +31,12 @@ class CampaignPresenter < SimpleDelegator
     money_formatter(campaign.goal)
   end
 
+  def facebook_url
+    uid = campaign.organizer.user_providers.find_by(provider: "facebook").uid
+
+    "https://facebook.com/#{uid}"
+  end
+
   private
 
   def campaign
