@@ -22,6 +22,10 @@ class DonationForm
       BigDecimal(donation_amount) + BigDecimal(website_amount)
   end
 
+  def net_donation_amount
+    BigDecimal(donation_amount) - Payment::BILLPLZ_FEE
+  end
+
   def save
     if valid? && donation.persisted? && bill.present? 
       update_payment
@@ -63,8 +67,9 @@ class DonationForm
       Donation.new.tap do |d|
         d.assign_attributes(
           campaign_id: campaign.id,
-          donation_amount: donation_amount,
-          website_amount: website_amount
+          donation_amount: net_donation_amount,
+          website_amount: website_amount,
+          gateway_fee: Payment::BILLPLZ_FEE
         )
         d.build_payment(amount: total_amount)
         d.save
