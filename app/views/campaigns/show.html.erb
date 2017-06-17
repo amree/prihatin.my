@@ -107,21 +107,21 @@
 
         <div class="column col-md-12 col-8 tab-wrapper">
           <div class="mobile-space">
-            <ul class="tab tab">
+            <ul class="tab">
               <li class="tab-item active">
-                <a href="#"><%= t(".campaign") %></a>
+                <a href="#" data-target="tab-campaign"><%= t(".campaign") %></a>
               </li>
               <li class="tab-item">
-                <a href="#"><%= t(".progress") %></a>
+                <a href="#" data-target="tab-progress"><%= t(".progress") %></a>
               </li>
               <li class="tab-item">
-                <a href="#"><%= t(".comments") %></a>
+                <a href="#" data-target="tab-comments"><%= t(".comments") %></a>
               </li>
             </ul>
 
             <div class="tab-contents">
               <%= render "story" %>
-              <%= render "updates" %>
+              <%= render "progress" %>
               <%= render "comments" %>
             </div>
           </div>
@@ -131,3 +131,10 @@
   </div>
 </section>
 
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      new window.Derma.SpectreTab().initialize();
+    })
+  </script>
+<% end %>
