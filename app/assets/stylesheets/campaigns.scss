@@ -36,11 +36,17 @@ $figures-space: 1.4rem;
 
     .organizer {
       display: flex;
+      align-items: flex-start;
       margin-bottom: $container-space;
+
+      .avatar-container {
+        flex: 0;
+      }
 
       .name {
         display: flex;
         align-items: center;
+        flex: 1;
         justify-content: center;
 
         a {
@@ -104,14 +110,6 @@ $figures-space: 1.4rem;
       margin-left: 0;
     }
 
-    .mobile-cats {
-      font-size: 1.4rem;
-
-      p {
-        margin: 1rem 0 1rem 0;
-      }
-    }
-
     .main-action {
       margin-top: $container-space;
 
@@ -165,8 +163,13 @@ $figures-space: 1.4rem;
         order: 1;
         padding-left: 0;
 
+        .avatar-container {
+          flex: initial;
+        }
+
         .name {
           justify-content: flex-start;
+          margin-top: 1em;
         }
 
         .avatar {
@@ -229,20 +232,13 @@ $figures-space: 1.4rem;
         order: 6;
       }
 
-      .cats {
-        order: 7;
-        padding-left: 0;
-        margin-bottom: 6rem;
-      }
-
       .tab-wrapper {
-        order: 8;
+        order: 7;
         padding-left: 0;
         padding-right: 0;
         font-size: 1.6rem;
       }
 
-      .mobile-cats,
       .mobile-desc,
       .divider {
         display: none;

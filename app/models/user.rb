@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :campaigns
   has_many :user_providers
 
   devise(

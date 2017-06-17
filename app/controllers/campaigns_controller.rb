@@ -1,6 +1,6 @@
 class CampaignsController < ApplicationController
   def show
-    @campaign = find_campaign
+    @campaign = CampaignPresenter.new(find_campaign)
   end
 
   def receipt

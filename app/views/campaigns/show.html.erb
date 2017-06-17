@@ -9,28 +9,29 @@
         <div class="column col-md-12 col-10 title">
           <div class="columns mobile-space">
             <div class="column col-12">
-              <h2 class="campaign-name">Rawatan Perubatan Adik Ahmad</h2>
+              <h2 class="campaign-name">
+                <%= @campaign.title %>
+              </h2>
             </div>
             <div class="column col-md-12 col-12 hide-md description">
-              <p>
-              Bantu asd fa sdfasdfasd fasdf asd fas fas fas dfasdf
-              </p>
+              <p><%= @campaign.description %></p>
             </div>
           </div>
         </div>
 
         <div class="column col-md-12 col-2 organizer">
           <div class="columns mobile-space">
-            <div class="column col-md-4 col-12">
+            <div class="column col-md-4 col-12 avatar-container">
               <a href="#">
                 <figure class="avatar">
-                  <img src="/images/avatar.jpg" />
+                  <%= image_tag @campaign.organizer.image %>
                 </figure>
               </a>
             </div>
             <div class="column col-md-8 col-12 name">
               <span>
-                Oleh <a href="#"> IMPAK </a>
+                <%= t(".by") %>
+                <%= @campaign.organizer.name %>
               </span>
             </div>
           </div>
@@ -38,15 +39,7 @@
 
         <div class="column col-md-12 col-12 mobile-desc">
           <div class="mobile-space">
-            <p>
-              Bantu Adik Ahmad agar dapat menjalani rawatan kanser supaya dia
-              dapat kembali ke sekolah untuk menghadapi UPSR tahun ini.
-              <span class="read-more">
-                <a href="#">
-                  Baca selanjutnya
-                </a>
-              </span>
-            </p>
+            <p><%= @campaign.description %></p>
           </div>
         </div>
 
@@ -62,31 +55,30 @@
             <div class="column col-md-12 col-12 figures">
               <div class="columns">
                 <div class="column col-md-5 col-12 num">
-                  <div class="point highlight">RM 5,850</div>
-                  dari RM 10,000
+                  <div class="point highlight">
+                    <%= t("currency") %> <%= @campaign.amount_collected %>
+                  </div>
+                  <%= t(".from") %>
+                  <%= t("currency") %> <%= @campaign.goal_amount %>
                 </div>
                 <div class="column col-md-3 col-12 donors">
-                  <div class="point">58</div>
-                  penderma
+                  <div class="point">
+                    <%= @campaign.total_donors %>
+                  </div>
+                  <%= t(".donor") %>
                 </div>
                 <div class="column col-md-3 col-12 days-to-go">
-                  <div class="point">12</div>
-                  hari lagi
-                </div>
-
-                <div class="column col-md-12 divider"></div>
-
-                <div class="column col-md-12 mobile-cats">
-                  <div class="mobile-space">
-                    <p>Perubatan &bullet; Kelantan</p>
+                  <div class="point">
+                    <%= @campaign.days_left %>
                   </div>
+                  <%= t(".days_left") %>
                 </div>
 
                 <div class="column col-md-12 divider"></div>
 
                 <div class="column col-md-12 col-12 main-action">
                   <div class="mobile-space">
-                    <%= link_to "Derma sekarang",
+                    <%= link_to t(".donate_action"),
                       new_campaign_donation_path(@campaign),
                       class: "donate btn btn-lg btn-primary"
                     %>
@@ -94,16 +86,18 @@
                 </div>
 
                 <div class="column col-md-12 col-12 secondary-actions">
-                  <a class="reminder btn">Ingatkan</a>
-                  <a class="share btn">Kongsi</a>
+                  <%= link_to t(".reminder_action"),
+                    "#",
+                    class: "reminder btn"
+                  %>
+                  <%= link_to t(".share_action"),
+                    "#",
+                    class: "share btn"
+                  %>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="column col-12 hide-md cats">
-          Perubatan &bullet; Kelantan
         </div>
 
         <div class="column col-md-12 divider"></div>
@@ -112,23 +106,18 @@
           <div class="mobile-space">
             <ul class="tab tab">
               <li class="tab-item active">
-                <a href="#">Kempen</a>
+                <a href="#"><%= t(".campaign") %></a>
               </li>
               <li class="tab-item">
-                <a href="#">Perkembangan</a>
+                <a href="#"><%= t(".progress") %></a>
               </li>
               <li class="tab-item">
-                <a href="#">Komen</a>
+                <a href="#"><%= t(".comments") %></a>
               </li>
             </ul>
 
             <div class="tab-contents">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus libero et a a a a a consectetur ullamcorper. Aliquam varius ex sed odio varius mollis. Aliquam semper mi felis, a fermentum leo commodo eu. Maecenas auctor, lectus in iaculis rhoncus, dui magna rhoncus justo, a facilisis sem mi vitae dolor. Morbi porta quam ut sapien fringilla vehicula. Maecenas auctor massa eros, eu ullamcorper ipsum mollis sit amet. Ut ut tempor neque. Pellentesque ligula libero, elementum nec volutpat in, dignissim ut justo. Etiam orci nulla, sodales vel dapibus sit amet, blandit aliquet turpis. Ut non tortor nibh. Cras tortor sapien, pharetra sed risus sed, aliquet blandit ipsum. Proin nisl nunc, viverra a consequat eget, ultrices non leo. In egestas felis sit amet justo placerat iaculis. Ut diam urna, maximus vitae purus in, pretium dapibus nibh. Sed pulvinar ullamcorper ante sit amet malesuada. Sed turpis ex, auctor eget ultrices sit amet, placerat eu tellus.
-              </p>
-              <p>
-                Donec vestibulum lorem ac pellentesque tincidunt. Vestibulum sodales, arcu vel convallis consequat, purus lectus viverra orci, vitae dignissim mi diam nec sapien. Cras consequat sem in nisl sodales, ac maximus erat commodo. Cras sapien lorem, commodo at justo non, cursus facilisis velit. Donec ante magna, dignissim sit amet lectus vitae, rhoncus mattis nunc. Vivamus commodo nisl et eleifend condimentum. Sed efficitur ultricies blandit. Curabitur felis diam, luctus id lacus ut, dapibus dapibus quam. Proin ullamcorper consectetur tellus, nec dignissim nulla interdum vitae. Aliquam volutpat semper enim, ut maximus massa ullamcorper eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam volutpat dui quis eros fringilla, at interdum velit congue
-              </p>
+              <p><%= @campaign.story.html_safe %></p>
             </div>
           </div>
         </div>

@@ -59,4 +59,6 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = SMTP_SETTINGS
+
+  config.action_view.raise_on_missing_translations = true
 end

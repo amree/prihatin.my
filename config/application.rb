@@ -24,5 +24,6 @@ module DermaAsia
       generate.view_specs false
       generate.job_specs false
     end
+    config.i18n.default_locale = :ms
   end
 end

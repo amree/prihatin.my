@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170616225154) do
+ActiveRecord::Schema.define(version: 20170617010610) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.string "slug"
     t.string "state"
     t.string "title"
     t.string "description"
-    t.string "story"
+    t.text "story"
     t.date "end_on"
     t.datetime "launched_at"
     t.decimal "goal", precision: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_campaigns_on_user_id"
   end
 
   create_table "delayed_jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(version: 20170616225154) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "campaigns", "users"
   add_foreign_key "donations", "campaigns"
   add_foreign_key "payments", "donations"
   add_foreign_key "user_providers", "users"
