@@ -1,4 +1,5 @@
-$container-space: 10px;
+$container-space: 1rem;
+$container-desktop-space: 3rem;
 $figures-space: 1.4rem;
 
 .campaigns {
@@ -136,12 +137,12 @@ $figures-space: 1.4rem;
       }
 
       .reminder {
-        margin-left: $container-space;
+        margin-left: 1rem;
         margin-right: $container-space / 2;
       }
 
       .share {
-        margin-right: $container-space;
+        margin-right: 1rem;
       }
     }
 
@@ -154,6 +155,14 @@ $figures-space: 1.4rem;
 @media (min-width: $size-lg) {
   .campaigns {
     .container {
+
+      .cover,
+      .stats,
+      .organizer,
+      .title {
+        margin-bottom: $container-desktop-space;
+      }
+
       .mobile-space {
         padding-left: inherit;
         padding-right: inherit;
@@ -199,6 +208,7 @@ $figures-space: 1.4rem;
 
       .stats {
         order: 4;
+        padding-left: 2rem;
 
         .figures {
           font-size: 1.4rem;
