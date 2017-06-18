@@ -38,18 +38,14 @@ $(function() {
         _this._calculate();
       });
 
-      this.$customDonationAmountField.on("keyup", function(e) {
-        if ((e.keyCode >= 48 && e.keyCode <= 57) ||
-            (e.keyCode >= 96 && e.keyCode <= 105)) {
-          _this._calculate();
-        }
+      this.$customDonationAmountField.on("input", function(e) {
+        _this._calculate();
       })
     },
 
     _enableCustomDonationAmount: function(enable) {
       if (enable) {
         this.$customDonationAmountField.prop("disabled", false);
-        this.$customDonationAmountField.focus();
       } else {
         this.$customDonationAmountRadio.prop("checked", false);
         this.$customDonationAmountField.prop("disabled", true);
