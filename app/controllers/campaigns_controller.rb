@@ -13,6 +13,6 @@ class CampaignsController < ApplicationController
   private
 
   def find_campaign
-    Campaign.find params[:id]
+    Campaign.find_by(slug: params[:id])
   end
 end

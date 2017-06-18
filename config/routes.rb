@@ -15,5 +15,9 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: "omniauth_callbacks" }
   )
 
+  constraints(CampaignUrlConstrainer.new) do
+    get "/:id", to: "campaigns#show", as: "campaign_slug_path"
+  end
+
   root to: "home#index"
 end

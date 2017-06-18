@@ -82,7 +82,7 @@
                 <div class="column col-md-12 col-12 main-action">
                   <div class="mobile-space">
                     <%= link_to t(".donate_action"),
-                      new_campaign_donation_path(@campaign),
+                      new_campaign_donation_path(@campaign.slug),
                       class: "donate btn btn-lg btn-primary"
                     %>
                   </div>
