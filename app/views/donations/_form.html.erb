@@ -1,13 +1,15 @@
 <section class="container grid-960 site-content">
   <div class="columns">
-    <%= simple_form_for [@campaign, @donation], html: { class: "column col-md-12" } do |f| %>
+    <%= simple_form_for [campaign, donation], html: { class: "column col-md-12" } do |f| %>
       <div class="columns">
         <div class="column col-md-6 col-sm-12 items">
+          <%= render "application/forms/error", messages: donation.errors.full_messages %>
+
           <%= render "auth" %>
-          <%= render "fields", f: f, campaign: @campaign, donation: @donation %>
+          <%= render "fields", f: f, campaign: campaign, donation: donation %>
         </div>
         <div class="column col-md-6 col-sm-12 preview">
-          <%= render "preview", f: f, campaign: @campaign %>
+          <%= render "preview", f: f, campaign: campaign %>
         </div>
       </div>
     <% end %>

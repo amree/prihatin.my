@@ -80,6 +80,10 @@
 
 @media (min-width: $size-lg) {
   .donations {
+    .items {
+      padding: 0;
+    }
+
     .preview {
       margin-left: 2rem;
     }

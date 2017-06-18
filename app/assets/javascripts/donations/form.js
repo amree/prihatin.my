@@ -1,7 +1,7 @@
 $(function() {
   var Form = function() {
     this.$customDonationAmountRadio =
-      $("form input[name='custom_donation_amount_flag']");
+      $("#donation_custom_donation_amount_flag_true");
     this.$customDonationAmountField =
       $("#donation_custom_donation_amount");
     this.$donationAmountOptions =

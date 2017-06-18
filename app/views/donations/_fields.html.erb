@@ -5,6 +5,7 @@
   <mark><%= campaign.title %></mark>
   </p>
   <div>
+    <%= f.input :website_amount, as: :hidden, input_html: { value: "" } %>
     <%= f.collection_radio_buttons :donation_amount,
       donation_options,
       :first,
@@ -13,7 +14,7 @@
     %>
   </div>
   <div class="other-amount">
-    <%= radio_button_tag :custom_donation_amount_flag,
+    <%= f.radio_button :custom_donation_amount_flag,
       true,
       checked: false
     %>

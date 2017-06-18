@@ -1,0 +1,13 @@
+<% if messages.any? %>
+  <div class="error-messages">
+    <% if messages.many? %>
+      <ul>
+        <% messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <%= messages.first %>
+    <% end %>
+  </div>
+<% end %>
