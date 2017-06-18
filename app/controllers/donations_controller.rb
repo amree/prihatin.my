@@ -8,6 +8,7 @@ class DonationsController < ApplicationController
     @campaign = find_campaign_by_id
     @donation = DonationForm.new(donation_params)
     @donation.campaign_id = @campaign.id
+    @donation.user_id = current_user&.id
 
     if @donation.save
       redirect_to @donation.payment_url

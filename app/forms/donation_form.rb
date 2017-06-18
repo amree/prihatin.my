@@ -9,6 +9,7 @@ class DonationForm
     :donation_amount,
     :website_amount,
     :campaign_id,
+    :user_id,
     :payment_url
   )
 
@@ -102,6 +103,7 @@ class DonationForm
     @donation ||=
       Donation.new.tap do |d|
         d.assign_attributes(
+          user_id: user_id,
           campaign_id: campaign.id,
           donation_amount: net_donation_amount,
           website_amount: website_amount,
