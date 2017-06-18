@@ -33,7 +33,7 @@
       margin-right: 0.5rem;
     }
 
-    .section.donation-amount {
+    .section.fields {
       p:not(:first-child) {
         margin-top: 1em;
       }
@@ -43,14 +43,11 @@
       display: inline-block;
       width: 20%;
     }
-
-    .submit-button {
-      margin-top: 4rem;
-    }
   }
 
   .preview {
     text-align: center;
+    padding: 0;
 
     p.first {
       margin-bottom: 0;
@@ -73,12 +70,27 @@
   .amount-total {
     font-weight: bold;
   }
+
+  .submit-button-preview {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    text-align: right;
+  }
 }
 
 @media (min-width: $size-lg) {
   .donations {
     .preview {
       margin-left: 2rem;
+    }
+
+    .submit-button-fields {
+      margin-top: 4rem;
+      text-align: left;
+    }
+
+    .submit-button-preview {
+      display: none;
     }
   }
 }

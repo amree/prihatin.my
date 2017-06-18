@@ -1,4 +1,4 @@
-<div class="section donation-amount">
+<div class="section fields">
   <h5><%= t(".title") %></h5>
   <p>
   <%= t(".donation_amount_helper_first") %>
@@ -25,8 +25,8 @@
     %>
   </div>
 </div>
-<div class="submit-button">
-  <%= f.submit t(".pay"), class: "btn btn-lg btn-primary" %>
-  <%= t(".or") %>
-  <%= link_to t(".back"), campaign %>
+<div class="submit-button-fields hide-md">
+  <%= f.submit t("donations.form.pay"), class: "btn btn-lg btn-primary" %>
+  <%= t("donations.form.or") %>
+  <%= link_to t("donations.form.back"), campaign %>
 </div>

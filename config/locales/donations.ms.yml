@@ -1,16 +1,17 @@
 ms:
   donations:
+    form:
+      pay: "Buat Bayaran"
+      or: "atau"
+      back: "Kembali"
     auth:
       title: "Pendaftaran atau Masuk"
       action: "Daftar atau Masuk"
       signup_recommendation: "Anda digalakkan untuk mendaftar terlebih dahulu sebelum menderma untuk mendapat pelbagai kemudahan lain seperti kemaskini terbaru kempen, rekod derma dan pelbagai lagi"
-    donation_amount:
+    fields:
       title: "Derma kepada kempen"
       donation_amount_helper_first: "Derma untuk"
       other_amount: "Jumlah lain:"
-      pay: "Buat Bayaran"
-      or: "atau"
-      back: "Kembali"
     preview:
       title: "Info Derma"
       pay: "Buat Bayaran"
