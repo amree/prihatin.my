@@ -14,3 +14,4 @@
 //= require jquery
 //= require namespace
 //= require spectre_tab
+//= require_tree ./donations

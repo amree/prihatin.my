@@ -20,7 +20,7 @@
 
     label > input {
       position: absolute;
-      top: -2rem;
+      visibility: hidden;
     }
 
     input:checked + label {

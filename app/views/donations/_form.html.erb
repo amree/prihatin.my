@@ -13,3 +13,11 @@
     <% end %>
   </div>
 </section>
+
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      new window.Derma.Donations.Form().initialize();
+    });
+  </script>
+<% end %>

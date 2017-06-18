@@ -8,11 +8,12 @@
     <%= f.collection_radio_buttons :donation_amount,
       donation_options,
       :first,
-      :last
+      :last,
+      { checked: donation_options.first }
     %>
   </div>
   <div class="other-amount">
-    <%= radio_button_tag :custom_donation_amount,
+    <%= radio_button_tag :custom_donation_amount_flag,
       true,
       checked: false
     %>
@@ -20,7 +21,7 @@
     <%= f.number_field :custom_donation_amount,
       class: "form-input custom-donation-amount",
       required: true,
-      value: 0
+      min: 2, patterns: "[0-9]*"
     %>
   </div>
 </div>

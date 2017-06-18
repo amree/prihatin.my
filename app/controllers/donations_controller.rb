@@ -27,7 +27,9 @@ class DonationsController < ApplicationController
       require(:donation).
       permit(
         :donation_amount,
-        :website_amount
+        :website_amount,
+        :custom_donation_amount,
+        :custom_donation_amount_flag
       )
   end
 end
