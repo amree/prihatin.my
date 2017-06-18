@@ -18,7 +18,11 @@ $(function() {
     },
 
     _onLoadSetup: function() {
-      this._enableCustomDonationAmount(false);
+      if (this.$customDonationAmountField.val() === "") {
+        this._enableCustomDonationAmount(false);
+      } else {
+        this._enableCustomDonationAmount(true);
+      }
     },
 
     _bindEvents: function() {
@@ -45,6 +49,7 @@ $(function() {
 
     _enableCustomDonationAmount: function(enable) {
       if (enable) {
+        this.$customDonationAmountRadio.prop("checked", true);
         this.$customDonationAmountField.prop("disabled", false);
       } else {
         this.$customDonationAmountRadio.prop("checked", false);

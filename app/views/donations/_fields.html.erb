@@ -1,8 +1,8 @@
 <div class="section fields">
   <h5><%= t(".title") %></h5>
   <p>
-  <%= t(".donation_amount_helper_first") %>
-  <mark><%= campaign.title %></mark>
+    <%= t(".donation_amount_helper_first") %>
+    <mark><%= campaign.title %></mark>
   </p>
   <div>
     <%= f.input :website_amount, as: :hidden, input_html: { value: "" } %>
@@ -10,7 +10,10 @@
       donation_options,
       :first,
       :last,
-      { checked: donation_options.first }
+      {
+        checked: donation.donation_amount ||
+          donation_options.first
+      }
     %>
   </div>
   <div class="other-amount">
@@ -22,7 +25,9 @@
     <%= f.number_field :custom_donation_amount,
       class: "form-input custom-donation-amount",
       required: true,
-      min: 2, patterns: "[0-9]*"
+      min: 2,
+      patterns: "[0-9]*",
+      value: donation.custom_donation_amount
     %>
   </div>
 </div>
