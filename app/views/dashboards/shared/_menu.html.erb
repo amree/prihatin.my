@@ -1,0 +1,14 @@
+<ul class="tab">
+  <li class="tab-item">
+    <%= link_to t(".donations"),
+      dashboards_donations_path,
+      class: "#{'active' if active == "donations"}"
+    %>
+  </li>
+  <li class="tab-item">
+    <%= link_to t(".campaigns"),
+      dashboards_campaigns_path,
+    class: "#{'active' if active == "campaigns"}"
+    %>
+  </li>
+</ul>

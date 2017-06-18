@@ -34,5 +34,5 @@
 <div class="submit-button-fields hide-md">
   <%= f.submit t("donations.form.pay"), class: "btn btn-lg btn-primary" %>
   <%= t("donations.form.or") %>
-  <%= link_to t("donations.form.back"), campaign %>
+  <%= link_to t("donations.form.back"), campaign_slug_path(campaign.slug) %>
 </div>

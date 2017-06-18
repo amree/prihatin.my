@@ -1,0 +1,44 @@
+<section class="container grid-960">
+  <div class="columns">
+    <div class="column col-md-12 col-12">
+      <%= render "dashboards/shared/menu", active: "campaigns" %>
+    </div>
+    <div class="column col-md-12 col-12">
+      <% if @campaigns.any? %>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Date</th>
+              <th class="text-right">Amount (RM)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @campaigns.each do |campaign| %>
+              <tr class="active">
+                <td>
+                  <%= link_to campaign.title,
+                    campaign_slug_path(campaign.slug)
+                  %>
+                </td>
+                <td>14 October 1994</td>
+                <td class="text-right">Crime, Drama</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <section class="empty">
+          <div class="empty-icon">
+            <span class="icon icon-group"></span>
+          </div>
+          <h4 class="empty-title"><%= t(".no_campaign") %></h4>
+          <p class="empty-subtitle"><%= t(".suggest_create") %></p>
+          <div class="empty-action">
+            <button class="btn btn-primary"><%= t(".create_button") %></button>
+          </div>
+        </section>
+      <% end %>
+    </div>
+  </div>
+</section>

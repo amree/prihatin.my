@@ -1,0 +1,16 @@
+ms:
+  dashboards:
+    shared:
+      menu:
+        donations: "Derma"
+        campaigns: "Kempen"
+    campaigns:
+      index:
+        no_campaign: "Anda belum memulakan mana-mana kempen"
+        suggest_create: "Mulakan dengan sebuah kempen dan bantu mereka yang memerlukan bantuan"
+        create_button: "Mulakan Kempen"
+    donations:
+      index:
+        no_donation: "Anda belum menderma dalam mana-mana kempen"
+        suggest_donate: "Mulakan dengan memilih mana-mana derma"
+        donate_button: "Mula Menderma"

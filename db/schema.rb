@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617014828) do
+ActiveRecord::Schema.define(version: 20170618152456) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170617014828) do
   end
 
   create_table "donations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
     t.bigint "campaign_id"
     t.decimal "donation_amount", precision: 6, scale: 2, default: "0.0"
     t.decimal "website_amount", precision: 6, scale: 2, default: "0.0"
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170617014828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["campaign_id"], name: "index_donations_on_campaign_id"
+    t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
   create_table "payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -92,6 +94,7 @@ ActiveRecord::Schema.define(version: 20170617014828) do
 
   add_foreign_key "campaigns", "users"
   add_foreign_key "donations", "campaigns"
+  add_foreign_key "donations", "users"
   add_foreign_key "payments", "donations"
   add_foreign_key "user_providers", "users"
 end

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :dashboards do
+    resources :campaigns, only: [:index]
+    resources :donations, only: [:index]
+  end
+
   get "home/index"
 
   resources :callbacks, only: [:create]
@@ -16,7 +21,7 @@ Rails.application.routes.draw do
   )
 
   constraints(CampaignUrlConstrainer.new) do
-    get "/:id", to: "campaigns#show", as: "campaign_slug_path"
+    get "/:id", to: "campaigns#show", as: "campaign_slug"
   end
 
   root to: "home#index"

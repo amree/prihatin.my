@@ -30,7 +30,7 @@
 </div>
 
 <div class="submit-button-preview">
-  <%= link_to t("donations.form.back"), campaign %>
+  <%= link_to t("donations.form.back"), campaign_slug_path(campaign.slug) %>
   <%= t("donations.form.or") %>
   <%= f.submit t("donations.form.pay"), class: "btn btn-lg btn-primary" %>
 </div>

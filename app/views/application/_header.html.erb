@@ -6,6 +6,10 @@
       </section>
       <section class="navbar-section">
         <% if user_signed_in? %>
+          <%= link_to "Dashboard",
+            dashboards_donations_path,
+            class: "btn btn-link"
+          %>
           <%= link_to "Keluar",
             destroy_user_session_path,
             method: :delete,
