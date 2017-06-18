@@ -45,6 +45,10 @@
   flex: 1;
 }
 
+span.icon {
+  margin-right: 0.5rem;
+}
+
 @media (min-width: $size-lg) {
   .container.extra-padding {
     padding-left: inherit;

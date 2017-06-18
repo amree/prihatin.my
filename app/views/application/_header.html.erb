@@ -12,10 +12,12 @@
             class: "btn btn-link"
           %>
         <% else %>
-          <%= link_to "Masuk",
-            user_facebook_omniauth_authorize_path,
-            class: "btn btn-primary"
+          <%= link_to user_facebook_omniauth_authorize_path,
+            class: "btn btn-primary" do
           %>
+            <span class="icon icon-facebook-official"></span>
+            Masuk
+          <% end %>
         <% end %>
       </section>
     </nav>

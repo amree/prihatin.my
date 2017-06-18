@@ -1,3 +1,84 @@
-// Place all the styles related to the Donations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.donations {
+  .items {
+    padding: 2rem;
+
+    .section {
+      margin-top: 1.5rem;
+    }
+
+    .section-submit {
+      margin-top: 2rem;
+    }
+
+    .other-amount {
+      margin-top: 1.5rem;
+    }
+
+    .section.first {
+      margin-top: 0;
+    }
+
+    label > input {
+      position: absolute;
+      top: -2rem;
+    }
+
+    input:checked + label {
+      background-color: $primary-color;
+      color: $light-color;
+    }
+
+    .collection_radio_buttons {
+      @extend .btn;
+      margin-right: 0.5rem;
+    }
+
+    .section.donation-amount {
+      p:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+
+    .form-input.custom-donation-amount {
+      display: inline-block;
+      width: 20%;
+    }
+
+    .submit-button {
+      margin-top: 4rem;
+    }
+  }
+
+  .preview {
+    text-align: center;
+
+    p.first {
+      margin-bottom: 0;
+    }
+
+    .table .amount {
+      text-align: right;
+    }
+
+    tr.last td {
+      border-bottom: 0;
+    }
+  }
+
+  .preview-container {
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+
+  .amount-total {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $size-lg) {
+  .donations {
+    .preview {
+      margin-left: 2rem;
+    }
+  }
+}

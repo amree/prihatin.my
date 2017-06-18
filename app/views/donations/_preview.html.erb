@@ -1,0 +1,30 @@
+<div class="preview-container">
+  <h5><%= t(".title") %></h5>
+  <p class="first"><%= t(".to") %> <%= campaign.organizer.name %></p>
+  <p><%= t(".for") %> <%= campaign.title %></p>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th><%= t(".name") %></th>
+        <th class="amount"><%= t(".amount") %> (<%= t("currency") %>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= t(".net_amount") %></td>
+        <td class="amount amount-net">0</td>
+      </tr>
+      <tr>
+        <td><%= t(".transaction_fee") %></td>
+        <td class="amount amount-fee">1.50</td>
+      </tr>
+      <tr class="last">
+        <td>
+          <strong><%= t(".total_amount") %></strong>
+        </td>
+        <td class="amount amount-total">0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

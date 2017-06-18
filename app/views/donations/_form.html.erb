@@ -1,19 +1,15 @@
 <section class="container grid-960 site-content">
   <div class="columns">
-    <div class="column col-md-6 col-sm-12">
+    <%= simple_form_for [@campaign, @donation], html: { class: "column col-md-12" } do |f| %>
       <div class="columns">
-        <div class="column col-md-12">
-          <%= simple_form_for [@campaign, @donation] do |f| %>
-            <%= f.input :donation_amount %>
-            <%= f.input :website_amount %>
-            <%= f.submit %>
-          <% end %>
+        <div class="column col-md-6 col-sm-12 items">
+          <%= render "auth" %>
+          <%= render "donation_amount", f: f, campaign: @campaign, donation: @donation %>
+        </div>
+        <div class="column col-md-6 col-sm-12 preview">
+          <%= render "preview", f: f, campaign: @campaign %>
         </div>
       </div>
-    </div>
-
-    <div class="column col-md-6 col-sm-12">
-      Preview
-    </div>
+    <% end %>
   </div>
 </section>

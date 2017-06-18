@@ -4,6 +4,7 @@ class DonationForm
   include Rails.application.routes.url_helpers
 
   attr_accessor(
+    :custom_donation_amount,
     :donation_amount,
     :website_amount,
     :campaign_id,

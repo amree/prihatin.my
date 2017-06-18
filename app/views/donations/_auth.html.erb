@@ -1,0 +1,10 @@
+<% unless user_signed_in? %>
+  <div class="section first">
+    <h5><%= t(".title") %></h5>
+    <p><%= t(".signup_recommendation") %></p>
+    <%= link_to user_facebook_omniauth_authorize_path, class: "btn" do %>
+      <span class="icon icon-facebook-official"></span>
+      <%= t(".action") %>
+    <% end %>
+  </div>
+<% end %>

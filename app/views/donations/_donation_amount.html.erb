@@ -1,0 +1,31 @@
+<div class="section donation-amount">
+  <h5><%= t(".title") %></h5>
+  <p>
+  <%= t(".donation_amount_helper_first") %>
+  <mark><%= campaign.title %></mark>
+  </p>
+  <div>
+    <%= f.collection_radio_buttons :donation_amount,
+      donation_options,
+      :first,
+      :last
+    %>
+  </div>
+  <div class="other-amount">
+    <%= radio_button_tag :custom_donation_amount,
+      true,
+      checked: false
+    %>
+    <%= t(".other_amount") %> <strong><%= t("currency") %></strong>
+    <%= f.number_field :custom_donation_amount,
+      class: "form-input custom-donation-amount",
+      required: true,
+      value: 0
+    %>
+  </div>
+</div>
+<div class="submit-button">
+  <%= f.submit t(".pay"), class: "btn btn-lg btn-primary" %>
+  <%= t(".or") %>
+  <%= link_to t(".back"), campaign %>
+</div>
