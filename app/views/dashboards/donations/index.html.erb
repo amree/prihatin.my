@@ -18,7 +18,12 @@
           <tbody>
             <% @donations.each do |donation| %>
               <tr>
-                <td><%= donation.campaign.title %></td>
+                <td>
+                  <%= link_to donation.campaign.title,
+                    campaign_slug_path(donation.campaign.slug),
+                    target: "_blank"
+                  %>
+                </td>
                 <td><%= donation.donated_on %></td>
                 <td class="text-right"><%= donation.pretty_total_amount %></td>
               </tr>
