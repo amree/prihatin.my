@@ -9,6 +9,9 @@ ms:
         no_campaign: "Anda belum memulakan mana-mana kempen"
         suggest_create: "Mulakan dengan sebuah kempen dan bantu mereka yang memerlukan bantuan"
         create_button: "Mulakan Kempen"
+        table_column_campaign: "Kempen"
+        table_column_end_on: "Tarikh Akhir"
+        table_column_amount_collected: "Jumlah Kutipan"
     donations:
       index:
         no_donation: "Anda belum menderma dalam mana-mana kempen"

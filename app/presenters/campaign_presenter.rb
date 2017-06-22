@@ -1,6 +1,7 @@
 class CampaignPresenter < SimpleDelegator
   include ApplicationHelper
   include ActionView::Helpers::DateHelper
+  extend PresenterCollection
 
   def days_left
     (campaign.end_on - Time.zone.now.to_date).to_i
@@ -35,6 +36,10 @@ class CampaignPresenter < SimpleDelegator
     uid = campaign.organizer.user_providers.find_by(provider: "facebook").uid
 
     "https://facebook.com/#{uid}"
+  end
+
+  def pretty_end_on
+    end_on.strftime("%d-%m-%Y")
   end
 
   private
