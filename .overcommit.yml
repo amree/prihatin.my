@@ -1,0 +1,27 @@
+CommitMsg:
+  CapitalizedSubject:
+    enabled: false
+  EmptyMessage:
+    enabled: true
+    quiet: true
+  SingleLineSubject:
+    enabled: true
+    quiet: true
+  TextWidth:
+    enabled: true
+    quiet: true
+  TrailingPeriod:
+    enabled: true
+    quiet: true
+
+PreCommit:
+  AuthorName:
+    enabled: false
+  RuboCop:
+    enabled: true
+    on_warn: fail
+    problem_on_unmodified_line: ignore
+  ScssLint:
+    enabled: true
+    on_warn: fail
+    problem_on_unmodified_line: ignore
