@@ -11,7 +11,11 @@ module ApplicationHelper
     end
   end
 
-  def money_formatter(amount)
-    number_to_currency(amount, unit: "").gsub(".00", "")
+  def money_formatter(amount, with_zero = false)
+    if with_zero
+      number_to_currency(amount, unit: "")
+    else
+      number_to_currency(amount, unit: "").gsub(".00", "")
+    end
   end
 end

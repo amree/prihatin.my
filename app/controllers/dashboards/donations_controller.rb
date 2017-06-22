@@ -1,5 +1,5 @@
 class Dashboards::DonationsController < ApplicationController
   def index
-    @donations = current_user.donations
+    @donations = DonationPresenter.wrap(current_user.donations)
   end
 end

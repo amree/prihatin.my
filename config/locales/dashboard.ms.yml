@@ -12,5 +12,8 @@ ms:
     donations:
       index:
         no_donation: "Anda belum menderma dalam mana-mana kempen"
-        suggest_donate: "Mulakan dengan memilih mana-mana derma"
+        suggest_donate: "Mulakan dengan memilih sebuah kempen untuk menderma"
         donate_button: "Mula Menderma"
+        table_column_campaign: "Kempen"
+        table_column_date: "Tarikh"
+        table_column_amount: "Jumlah"
