@@ -1,6 +1,14 @@
-<% if @payment.failed? %>
-  FAILED
-<% else %>
-  SUCCESS
-<% end %>
-
+<section class="container grid-960 site-content">
+  <div class="columns">
+    <% if @payment.success? %>
+      <%= render "campaigns/receipt/success",
+        payment: @payment,
+        preview: @preview
+      %>
+    <% else %>
+      <%= render "campaigns/receipt/failed",
+        payment: @payment
+      %>
+    <% end %>
+  </div>
+</section>

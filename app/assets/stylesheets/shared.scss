@@ -1,0 +1,21 @@
+.preview {
+  text-align: center;
+  padding: 0;
+
+  p.first {
+    margin-bottom: 0;
+  }
+
+  .table .amount {
+    text-align: right;
+  }
+
+  tr.last td {
+    border-bottom: 0;
+  }
+
+  .preview-wrapper {
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+}

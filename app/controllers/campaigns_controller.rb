@@ -8,6 +8,9 @@ class CampaignsController < ApplicationController
 
     @payment = UpdatePaymentStatusJob.new.perform id
     @payment = PaymentPresenter.new(@payment)
+    @preview = PreviewPresenter.new(
+      DonationPresenter.new(@payment.donation)
+    )
   end
 
   private

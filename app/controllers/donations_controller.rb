@@ -1,6 +1,7 @@
 class DonationsController < ApplicationController
   def new
     @campaign = find_campaign_by_slug
+    @preview = init_preview
     @donation = DonationForm.new
   end
 
@@ -13,11 +14,17 @@ class DonationsController < ApplicationController
     if @donation.save
       redirect_to @donation.payment_url
     else
+      @preview = init_preview
+
       render :new
     end
   end
 
   private
+
+  def init_preview
+    PreviewPresenter.new(DonationPresenter.new(NullDonation.new))
+  end
 
   def find_campaign_by_slug
     Campaign.find_by(slug: params[:campaign_id])

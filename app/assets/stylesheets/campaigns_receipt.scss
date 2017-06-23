@@ -1,0 +1,23 @@
+.campaigns-receipt {
+  .message {
+    margin-bottom: 2rem;
+  }
+
+  .more-donation-mobile {
+    margin-top: 1rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: $size-lg) {
+  .campaigns-receipt {
+    .more-donation-desktop {
+      margin-right: initial;
+      margin-left: 0.5rem;
+    }
+
+    .more-donation-mobile {
+      display: none;
+    }
+  }
+}

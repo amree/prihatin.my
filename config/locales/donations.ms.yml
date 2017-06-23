@@ -12,13 +12,3 @@ ms:
       title: "Derma kepada kempen"
       donation_amount_helper_first: "Derma untuk"
       other_amount: "Jumlah lain:"
-    preview:
-      title: "Info Derma"
-      pay: "Buat Bayaran"
-      to: "Kepada"
-      for: "Untuk"
-      name: "Nama"
-      amount: "Jumlah"
-      net_amount: "Jumlah Bersih"
-      transaction_fee: "Caj Transaksi"
-      total_amount: "Jumlah Keseluruhan"

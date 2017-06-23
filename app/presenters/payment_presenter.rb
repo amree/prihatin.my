@@ -1,10 +1,18 @@
 class PaymentPresenter < SimpleDelegator
   def success?
-    payment == Payment::PAID
+    payment.state == Payment::PAID
   end
 
   def failed?
-    payment == Payment::DUE
+    payment.state == Payment::DUE
+  end
+
+  def donation
+    DonationPresenter.new(payment.donation)
+  end
+
+  def campaign
+    CampaignPresenter.new(payment.donation.campaign)
   end
 
   private

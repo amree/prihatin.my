@@ -6,7 +6,9 @@
 
 @import "overrides";
 @import "global";
+@import "shared";
 @import "campaigns";
+@import "campaigns_receipt";
 @import "donations";
 @import "dashboards_donations";
 @import "dashboards_campaigns";

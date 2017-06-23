@@ -1,0 +1,36 @@
+<div class="column col-md-6 col-sm-12 message">
+  <h4><%= t(".title") %></h4>
+  <p><%= t(".body") %></p>
+  <p><%= t(".share") %></p>
+  <div class="dropdown">
+    <div class="btn-group">
+      <a class="btn btn-primary">Kongsi Kempen</a>
+      <a class="btn btn-primary dropdown-toggle" tabindex="0"><i class="icon icon-caret"></i></a>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#dropdowns">Facebook</a>
+        </li>
+        <li class="menu-item">
+          <a href="#dropdowns">Twitter</a>
+        </li>
+        <li class="menu-item">
+          <a href="#dropdowns">Instagram</a>
+        </li>
+        <li class="menu-item">
+          <a href="#dropdowns">WhatsApp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to t(".donate_more"), root_path, class: "hide-md more-donation-desktop" %>
+</div>
+<div class="column col-md-6 col-sm-12 preview">
+  <%= render "application/shared/preview",
+    campaign: payment.campaign,
+    preview: preview
+  %>
+
+  <p class="more-donation-mobile text-right">
+    <%= link_to t(".donate_more"), root_path %>
+  </p>
+</div>

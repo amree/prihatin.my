@@ -11,3 +11,11 @@ ms:
       campaign: "Kempen"
       progress: "Perkembangan"
       comments: "Komen"
+    receipt:
+      success:
+        title: "Tahniah! Transaksi anda telah berjaya"
+        body: "Terima kasih di atas sumbangan anda. Ianya sangat bermakna kepada mereka yang memerlukannya."
+        share: "Bantu kempen ini untuk mendapatkan lebih banyak dana dengan berkongsinya di laman sosial atau dalam kumpulan chat anda."
+        donate_more: "Bantu kempen lain >"
+      failed:
+
