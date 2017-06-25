@@ -1,0 +1,9 @@
+<div class="column col-md-6 col-sm-12">
+  <h4><%= t(".title") %></h4>
+  <p><%= t(".body") %></p>
+  <%= link_to t(".action"),
+    campaign_slug_path(payment.donation.campaign.slug),
+    class: "btn"
+  %>
+</div>
+<div class="column col-md-6 col-sm-12"></div>

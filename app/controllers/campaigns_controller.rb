@@ -3,16 +3,6 @@ class CampaignsController < ApplicationController
     @campaign = CampaignPresenter.new(find_campaign)
   end
 
-  def receipt
-    id = params.dig("billplz", "id")
-
-    @payment = UpdatePaymentStatusJob.new.perform id
-    @payment = PaymentPresenter.new(@payment)
-    @preview = PreviewPresenter.new(
-      DonationPresenter.new(@payment.donation)
-    )
-  end
-
   private
 
   def find_campaign

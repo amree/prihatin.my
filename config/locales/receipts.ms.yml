@@ -1,0 +1,12 @@
+ms:
+  receipts:
+    success:
+      title: "Tahniah! Transaksi anda telah berjaya"
+      body: "Terima kasih di atas sumbangan anda. Ianya sangat bermakna kepada mereka yang memerlukannya."
+      share: "Bantu kempen ini untuk mendapatkan lebih banyak dana dengan berkongsinya di laman sosial atau dalam kumpulan chat anda."
+      donate_more: "Bantu kempen lain >"
+    failed:
+      title: "Oops.. Transaksi anda tidak berjaya"
+      body: "Terdapat masalah dengan transaksi anda. Sekiranya anda yakin transaksi anda telah berjaya, sila hubungi kami untuk kepastian. Jika tidak, anda boleh mencuba sekali lagi."
+      action: "Cuba sekali lagi"
+

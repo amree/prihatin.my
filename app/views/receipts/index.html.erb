@@ -1,12 +1,12 @@
 <section class="container grid-960 site-content">
   <div class="columns">
     <% if @payment.success? %>
-      <%= render "campaigns/receipt/success",
+      <%= render "success",
         payment: @payment,
         preview: @preview
       %>
     <% else %>
-      <%= render "campaigns/receipt/failed",
+      <%= render "failed",
         payment: @payment
       %>
     <% end %>

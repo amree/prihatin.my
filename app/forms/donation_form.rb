@@ -124,7 +124,7 @@ class DonationForm
   def redirect_url
     [
       ENV.fetch("PUBLIC_URL"),
-      receipt_campaign_path(campaign)
+      receipts_path
     ].join("")
   end
 
