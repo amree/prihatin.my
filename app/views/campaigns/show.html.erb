@@ -22,7 +22,9 @@
         <div class="column col-md-12 col-2 organizer">
           <div class="columns mobile-space">
             <div class="column col-md-4 col-12 avatar-container">
-              <%= link_to @campaign.facebook_url, target: "_blank" do %>
+              <%= link_to @campaign.organizer_facebook_url,
+                target: "_blank" do
+              %>
                 <figure class="avatar">
                   <%= image_tag @campaign.organizer.image %>
                 </figure>
@@ -32,7 +34,7 @@
               <span>
                 <%= t(".by") %>
                 <%= link_to @campaign.organizer.name,
-                  @campaign.facebook_url,
+                  @campaign.organizer_facebook_url,
                   target: "_blank"
                 %>
               </span>
@@ -93,10 +95,25 @@
                     "#",
                     class: "reminder btn"
                   %>
-                  <%= link_to t(".share_action"),
-                    "#",
-                    class: "share btn"
-                  %>
+
+                  <div class="dropdown dropdown-right share">
+                    <a class="btn dropdown-toggle" tabindex="0">
+                      <%= t(".share_action") %>
+                      <i class="icon icon-caret"></i>
+                    </a>
+                    <ul class="menu">
+                      <li class="menu-item">
+                        <a href="#" 
+                           data-url="<%= @campaign.url %>"
+                           class="js-fb-share">
+                          Facebook
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">Copy URL</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,6 +148,15 @@
   <script>
     $(function() {
       new window.Derma.SpectreTab().initialize();
+      new window.Derma.FacebookShare().initialize();
     })
   </script>
+<% end %>
+
+<% content_for(:facebook_meta_content) do %>
+  <meta property="og:url" content="<%= @campaign.url %>" />
+  <meta property="og:type" content="<%= @campaign.facebook_og.type %>" />
+  <meta property="og:title" content="<%= @campaign.facebook_og.title %>" />
+  <meta property="og:description" content="<%= @campaign.facebook_og.description %>" />
+  <meta property="og:image" content="<%= @campaign.facebook_og.image_url %>" />
 <% end %>

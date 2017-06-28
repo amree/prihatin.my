@@ -1,0 +1,8 @@
+<meta property="fb:app_id" content="<%= ENV.fetch('FACEBOOK_APP_ID') %>" />
+<% if content_for(:facebook_meta_content).present? %>
+  <%= yield(:facebook_meta_content) %>
+<% else %>
+  <meta property="og:title" content="<%= t("website_name") %>" />
+  <meta property="og:description" content="<%= t("website_description") %>" />
+  <meta property="og:image" content="https://www.google.com" />
+<% end %>

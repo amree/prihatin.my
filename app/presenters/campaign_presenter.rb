@@ -1,6 +1,7 @@
 class CampaignPresenter < SimpleDelegator
   include ApplicationHelper
   include ActionView::Helpers::DateHelper
+  include Rails.application.routes.url_helpers
   extend PresenterCollection
 
   def days_left
@@ -32,7 +33,7 @@ class CampaignPresenter < SimpleDelegator
     money_formatter(campaign.goal)
   end
 
-  def facebook_url
+  def organizer_facebook_url
     uid = campaign.organizer.user_providers.find_by(provider: "facebook").uid
 
     "https://facebook.com/#{uid}"
@@ -40,6 +41,14 @@ class CampaignPresenter < SimpleDelegator
 
   def pretty_end_on
     end_on.strftime("%d-%m-%Y")
+  end
+
+  def facebook_og
+    @facebook_og ||= FacebookOpenGraphPresenter.new(campaign)
+  end
+
+  def url
+    "#{ENV['PUBLIC_URL']}#{campaign_slug_path(campaign.slug)}"
   end
 
   private
