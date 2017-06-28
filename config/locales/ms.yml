@@ -2,3 +2,5 @@ ms:
   currency: "RM"
   website_description: "Kumpul derma atas talian"
   website_name: "Derma.asia"
+  sharing:
+    copied: "Copied..."

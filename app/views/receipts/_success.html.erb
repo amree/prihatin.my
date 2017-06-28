@@ -6,20 +6,25 @@
     <div class="btn-group">
       <a class="btn btn-primary">Kongsi Kempen</a>
       <a class="btn btn-primary dropdown-toggle" tabindex="0"><i class="icon icon-caret"></i></a>
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="#dropdowns">Facebook</a>
-        </li>
-        <li class="menu-item">
-          <a href="#dropdowns">Twitter</a>
-        </li>
-        <li class="menu-item">
-          <a href="#dropdowns">Instagram</a>
-        </li>
-        <li class="menu-item">
-          <a href="#dropdowns">WhatsApp</a>
-        </li>
-      </ul>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#" 
+               data-url="<%= payment.campaign.url %>"
+               class="js-fb-share">
+              Facebook
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#"
+               data-clipboard-text="<%= payment.campaign.url %>"
+               class="js-copy-url">
+              Copy URL
+            </a>
+            <span class="copy-url-status copy-url-status-right">
+              <%= t("sharing.copied") %>
+            </span>
+          </li>
+        </ul>
     </div>
   </div>
   <%= link_to t(".donate_more"), root_path, class: "hide-md more-donation-desktop" %>
@@ -34,3 +39,11 @@
     <%= link_to t(".donate_more"), root_path %>
   </p>
 </div>
+
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      new window.Derma.ClipboardCopy(".js-copy-url", ".copy-url-status").initialize();
+    })
+  </script>
+<% end %>
