@@ -83,16 +83,18 @@ class DonationForm
   end
 
   def bill
+    reconfigure_billplz_api_key
+
     @bill ||=
       begin
         Billplz::Bill.create(
-          collection_id: "t0gjvkkt",
+          collection_id: campaign.billplz_collection_id,
           email: "hello@derma.asia",
-          name: "Campaign's Organizer Name",
+          name: campaign.title,
           amount: (total_amount * 100).to_s,
           callback_url: callback_url,
           redirect_url: redirect_url,
-          description: "Campaign description"
+          description: campaign.description
         )
       rescue Flexirest::HTTPClientException, Flexirest::HTTPServerException => e
         nil
@@ -133,5 +135,11 @@ class DonationForm
       ENV.fetch("PUBLIC_URL"),
       callbacks_path
     ].join("")
+  end
+
+  def reconfigure_billplz_api_key
+    Billplz.configure do |config|
+      config.api_key = campaign.organizer.billplz_api_key
+    end
   end
 end

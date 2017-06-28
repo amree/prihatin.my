@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628085029) do
+ActiveRecord::Schema.define(version: 20170628093837) do
 
   create_table "campaigns", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
+    t.string "billplz_collection_id"
     t.string "slug"
     t.string "state"
     t.string "title"
@@ -75,6 +76,7 @@ ActiveRecord::Schema.define(version: 20170628085029) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "billplz_api_key"
     t.string "name"
     t.string "image"
     t.string "email", default: "", null: false
