@@ -3,7 +3,7 @@
     <div class="column col-md-12 col-12">
       <div class="columns">
         <div class="column col-md-12 col-8 cover">
-          <img src="/images/cover.jpg" class="img-responsive">
+          <img src="<%= @campaign.cover_url %>" class="img-responsive">
         </div>
 
         <div class="column col-md-12 col-10 title">
@@ -167,5 +167,5 @@
   <meta property="og:type" content="<%= @campaign.facebook_og.type %>" />
   <meta property="og:title" content="<%= @campaign.facebook_og.title %>" />
   <meta property="og:description" content="<%= @campaign.facebook_og.description %>" />
-  <meta property="og:image" content="<%= @campaign.facebook_og.image_url %>" />
+  <meta property="og:image" content="<%= @campaign.cover_url %>" />
 <% end %>
