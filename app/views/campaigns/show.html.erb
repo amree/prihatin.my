@@ -93,7 +93,8 @@
                 <div class="column col-md-12 col-12 secondary-actions">
                   <%= link_to t(".reminder_action"),
                     "#",
-                    class: "reminder btn"
+                    class: "reminder btn",
+                    data: { clipboard_text: "waat" }
                   %>
 
                   <div class="dropdown dropdown-right share">
@@ -110,7 +111,12 @@
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="#">Copy URL</a>
+                        <a href="#"
+                           data-clipboard-text="<%= @campaign.url %>"
+                           class="js-copy-url">
+                          Copy URL
+                        </a>
+                        <span class="copy-url-status">Copied...</span>
                       </li>
                     </ul>
                   </div>
@@ -149,6 +155,7 @@
     $(function() {
       new window.Derma.SpectreTab().initialize();
       new window.Derma.FacebookShare().initialize();
+      new window.Derma.ClipboardCopy(".js-copy-url", ".copy-url-status").initialize();
     })
   </script>
 <% end %>

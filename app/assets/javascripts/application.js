@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
+//= require jquery/dist/jquery
+//= require clipboard/dist/clipboard
 //= require namespace
 //= require spectre_tab
 //= require facebook_share
+//= require clipboard_copy
 //= require_tree ./donations
