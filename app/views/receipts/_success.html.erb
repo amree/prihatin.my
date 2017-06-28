@@ -11,14 +11,14 @@
         <ul class="menu">
           <li class="menu-item">
             <a href="#" 
-               data-url="<%= payment.campaign.url %>"
+               data-url="<%= payment.campaign.share_url(source: "facebook", medium: "receipt")  %>"
                class="js-fb-share">
               Facebook
             </a>
           </li>
           <li class="menu-item">
             <a href="#"
-               data-clipboard-text="<%= payment.campaign.url %>"
+               data-clipboard-text="<%= payment.campaign.share_url(source: "facebook", medium: "receipt") %>"
                class="js-copy-url">
               Copy URL
             </a>

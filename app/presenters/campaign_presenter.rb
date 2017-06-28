@@ -51,6 +51,15 @@ class CampaignPresenter < SimpleDelegator
     "#{ENV['PUBLIC_URL']}#{campaign_slug_path(campaign.slug)}"
   end
 
+  def share_url(source:, medium:)
+    [
+      url,
+      "?utm_source=#{source}",
+      "&utm_medium=#{medium}",
+      "&utm_campaign=#{campaign.slug}",
+    ].join("")
+  end
+
   private
 
   def campaign

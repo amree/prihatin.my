@@ -105,14 +105,14 @@
                     <ul class="menu">
                       <li class="menu-item">
                         <a href="#" 
-                           data-url="<%= @campaign.url %>"
+                           data-url="<%= @campaign.share_url(source: "facebook", medium: "campaign") %>"
                            class="js-fb-share">
                           Facebook
                         </a>
                       </li>
                       <li class="menu-item">
                         <a href="#"
-                           data-clipboard-text="<%= @campaign.url %>"
+                           data-clipboard-text="<%= @campaign.share_url(source: "clipboard", medium: "campaign") %>"
                            class="js-copy-url">
                           Copy URL
                         </a>
