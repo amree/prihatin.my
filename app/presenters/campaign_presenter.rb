@@ -8,7 +8,7 @@ class CampaignPresenter < SimpleDelegator
     (campaign.end_on - Time.zone.now.to_date).to_i
   end
 
-  def total_donors
+  def total_donations
     Donation.
       joins(:payment).
       where(
