@@ -1,5 +1,7 @@
 ms:
   application:
+    footer:
+      about: "Tentang"
     shared:
       preview:
         title: "Info Derma"

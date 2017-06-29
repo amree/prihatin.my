@@ -1,2 +1,34 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="banner">
+  <h4><%= t(".headline") %></h4>
+  <a href="#" class="btn btn-lg btn-primary"><%= t(".action") %></a>
+</div>
+<div class="container grid-960">
+  <div class="mission">
+    <h4><%= t(".mission_title") %></h4>
+    <p><%= t(".mission_body_1_html") %></p>
+    <p><%= t(".mission_body_2") %></p>
+  </div>
+</div>
+<div class="summary">
+  <div class="summary-item">
+    <span class="icon icon-group"></span>
+    <%= t(".organize") %>
+  </div>
+  <div class="summary-item">
+    <span class="icon icon-share2"></span>
+    <%= t(".share") %>
+  </div>
+  <div class="summary-item last">
+    <span class="icon icon-banknote"></span>
+    <%= t(".collect") %>
+  </div>
+</div>
+<div class="cards container">
+  <div class="columns">
+    <% if @campaigns.any? %>
+      <% @campaigns.each do |campaign| %>
+        <%= render "card", campaign: campaign %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="column col-3 col-xs-12">
+  <div class="card">
+    <div class="card-image">
+      <%= link_to campaign_slug_path(campaign.slug) do %>
+        <img src="<%= campaign.cover_url %>" class="img-responsive" />
+      <% end %>
+    </div>
+    <div class="card-header">
+      <div class="card-title">
+        <%= link_to campaign.title, campaign_slug_path(campaign.slug) %>
+      </div>
+      <div class="card-subtitle"><%= campaign.days_left %> <%= t(".days_left") %></div>
+    </div>
+    <div class="card-body"><%= campaign.description %></div>
+    <div class="card-footer">
+      <span class="amount">
+        <%= t("currency") %> <%= campaign.amount_collected %>
+      </span>
+      <%= t(".from") %>
+      <%= t("currency") %> <%= campaign.goal_amount %>
+    </div>
+  </div>
+</div>
+

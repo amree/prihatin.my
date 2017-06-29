@@ -20,8 +20,7 @@
               <tr>
                 <td>
                   <%= link_to donation.campaign.title,
-                    campaign_slug_path(donation.campaign.slug),
-                    target: "_blank"
+                    campaign_slug_path(donation.campaign.slug)
                   %>
                 </td>
                 <td><%= donation.donated_on %></td>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon.eot?beopyl');
-  src:  url('icomoon.eot?beopyl#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?beopyl') format('truetype'),
-    url('icomoon.woff?beopyl') format('woff'),
-    url('icomoon.svg?beopyl#icomoon') format('svg');
+  src:  url('icomoon.eot?annqa3');
+  src:  url('icomoon.eot?annqa3#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?annqa3') format('truetype'),
+    url('icomoon.woff?annqa3') format('woff'),
+    url('icomoon.svg?annqa3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,4 +35,7 @@
 }
 .icon-banknote:before {
   content: "\e900";
+}
+.icon-share2:before {
+  content: "\ea82";
 }
