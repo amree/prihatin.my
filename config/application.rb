@@ -8,7 +8,11 @@ Bundler.require(*Rails.groups)
 
 module DermaAsia
   class Application < Rails::Application
-    if Rails.env.development? || Rails.env.test?
+    if Rails.env.production?
+      Raven.configure do |config|
+        config.dsn = "#{ENV.fetch("SENTRY_DSN")}"
+      end
+    else
       Dotenv.overload(".env.local")
     end
 
