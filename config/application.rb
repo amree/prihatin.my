@@ -8,7 +8,9 @@ Bundler.require(*Rails.groups)
 
 module DermaAsia
   class Application < Rails::Application
-    Dotenv.overload(".env.local")
+    if Rails.env.development? || Rails.env.test?
+      Dotenv.overload(".env.local")
+    end
 
     config.load_defaults 5.1
     config.active_job.queue_adapter = :delayed_job
