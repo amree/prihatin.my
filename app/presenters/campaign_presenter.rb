@@ -18,19 +18,24 @@ class CampaignPresenter < SimpleDelegator
   end
 
   def amount_collected
-    amount =
-      Donation.
-        joins(:payment).
-        where(
-          donations: { campaign_id: campaign.id },
-          payments: { state: Payment::PAID }
-        ).sum(:donation_amount)
+    Donation.
+      joins(:payment).
+      where(
+        donations: { campaign_id: campaign.id },
+        payments: { state: Payment::PAID }
+    ).sum(:donation_amount)
+  end
 
-    money_formatter(amount)
+  def pretty_amount_collected
+    money_formatter(amount_collected)
   end
 
   def goal_amount
     money_formatter(campaign.goal)
+  end
+
+  def goal_progress
+    amount_collected.to_f / campaign.goal * 100
   end
 
   def organizer_facebook_url

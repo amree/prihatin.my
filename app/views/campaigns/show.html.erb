@@ -53,7 +53,10 @@
             <div class="column col-md-12 col-12 bar-bg">
               <div class="mobile-space">
                 <div class="bar bar-sm">
-                  <div class="bar-item" role="progressbar" style="width:55%"></div>
+                  <div class="bar-item"
+                       role="progressbar"
+                       style="width:<%= @campaign.goal_progress %>%">
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,7 +64,7 @@
               <div class="columns">
                 <div class="column col-md-5 col-12 num">
                   <div class="point highlight">
-                    <%= t("currency") %> <%= @campaign.amount_collected %>
+                    <%= t("currency") %> <%= @campaign.pretty_amount_collected %>
                   </div>
                   <%= t(".from") %>
                   <%= t("currency") %> <%= @campaign.goal_amount %>

@@ -14,7 +14,7 @@
     <div class="card-body"><%= campaign.description %></div>
     <div class="card-footer">
       <span class="amount">
-        <%= t("currency") %> <%= campaign.amount_collected %>
+        <%= t("currency") %> <%= campaign.pretty_amount_collected %>
       </span>
       <%= t(".from") %>
       <%= t("currency") %> <%= campaign.goal_amount %>
