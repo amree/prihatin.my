@@ -1,0 +1,25 @@
+ms:
+  pages:
+    about:
+      title: "Tentang Kami"
+      items:
+        - body: "ProjekDerma dibangunakan apabila kami melihat terlalu banyak kempen mengumpulkan dana dijalankan secara manual. Walaupun kempen-kempen tersebut biasanya berjaya mencapai sasaran, kami berfikir ianya boleh ditambah baik dengan sebuah laman web khusus untuk perkara ini."
+        - body: "Dengan inspirasi dari pelbagai laman web lain seperti Give.Asia, 100percentprojek, GoFundMe, YouCaring dan lain-lain, kami bangunkan laman web ini agar bersesuaian dengan rakyat Malaysia. Masih banyak lagi ciri-ciri yang ingin kami siapkan, tapi disebabkan kekangan masa, kami melancarkan ciri-ciri tersebut dari semasa ke semasa."
+        - body: "Misi kami sangat ringkas iaitu kami ingin menjadi sebuah platform untuk memudahkan proses pengumpulan dana bagi anda membantu mereka yang memerlukannya. Kami bina platform ini dengan keupayaan mesra telefon, integrasi dengan bank, antaramuka yang ringkas dan sebagainya."
+        - body: "Kami mengalu-alukan sebarang komen, cadangan atau pertanyaan dari pihak anda. Kami boleh dihubungi melalui hello@projekderma.my."
+    faq:
+      title: "Soalan Lazim"
+      items:
+        - question: "Bagaimanakan platform ini berfungsi bagi penganjur?"
+          answer: "ProjekDerma memudahkan penganjur untuk melancarkan kempen bagi mengumpul dana dalam membantu mereka yang memerlukan. Penganjur cuma perlu berdaftar dengan laman web ini dan menghantar info kempen yang hendak dilancarkan. Seterusnya penganjur boleh berkongsi laman kempen tersebut agar orang ramai dapat menderma dengan mudah."
+        - question: "Bagaimanakan platform ini berfungsi untuk penderma?"
+          answer: "Dengan ProjekDerma, penderma hanya perlu memilih kempen yang ingin dibantu dan tekan butang derma. Kami menggunakan kemudahan terkini untuk memudahkan sumbangan yang diberi dimasukkan ke akaun penganjur secepat yang mungkin. Anda tidak lagi perlu memasukkan nombor akaun bank dan sebagainya kerana banyak proses telah diautomasikan sepenuhnya."
+        - question: "Apakah kempen yang boleh dianjurkan?"
+          answer: "Anda boleh melancarkan apa jua kempen yang anda fikir bersesuaian. Sebagai contoh, anda mungkin ingin membantu dari segi kos perubatan, kos pembelajaran, program komuniti, membantu haiwan peliharaan dan sebagainya. Selagi ianya tidak menyalahi undang-undang yang ada, ia sepatutnya tidak akan menjadi masalah. Walaubagaimanapun, pada peringkat permulaan, kempen yang dihantar akan melalui proses saringan yang mudah."
+        - question: "Adakah ianya selamat?"
+          answer: "Pada masa ini, tiada transaki akan dilakukan di laman web ini. Sebaliknya, setiap transaksi wang akan dilakukan di laman web bank masing-masing. Prosesnya amat mudah dan selamat."
+        - question: "Adakah pengajur akan dikenakan apa-apa caj?"
+          answer: "Tiada sebarang caj akan dikenakan kepada penganjur. Buat masa ini kami tidak bercadang untuk mengenakan sebarang bayaran. Segalanya adalah percuma. Walaubagaimanapun, kami tidak dapat mengelakkan caj yang dikenakan dari pihak penyedia perkhidmatan pembayaran kami iaitu Billplz. Caj dari mereka adalah RM 1.50 untuk setiap transaksi."
+        - question: "Adakah laman web ini boleh hidup tanpa sebarang caj?"
+          answer: "Kami mempunyai perancangan untuk memastikan survival laman web ini. Perancangan tersebut hanya akan dijalankan apabila segalanya telah dimuktamadkan. Akan tetapi yang pastinya, ia tidak akan menjejaskan kutipan dana kempen anda."
+

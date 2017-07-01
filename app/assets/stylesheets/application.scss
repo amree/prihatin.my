@@ -8,9 +8,11 @@
 @import "global";
 @import "shared";
 @import "clipboard";
+
 @import "campaigns";
-@import "receipts";
+@import "dashboards_campaigns";
+@import "dashboards_donations";
 @import "donations";
 @import "home";
-@import "dashboards_donations";
-@import "dashboards_campaigns";
+@import "receipts";
+@import "pages";

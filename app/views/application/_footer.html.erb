@@ -1,10 +1,10 @@
 <footer class="section-footer bg-gray">
   <section class="grid-footer container grid-960">
     <p>
-    <a href="#"><%= t(".about") %></a> |
-    <a href="#">FAQ</a> |
-    <a href="#" target="_blank">Facebook</a> |
-    <a href="#" target="_blank">Twitter</a>
+      <%= link_to t(".about"), page_path("about") %> |
+      <%= link_to t(".faq"), page_path("faq") %> |
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="#" target="_blank">Twitter</a>
     </p>
     <p>Designed and built with ♥ using Ruby on Rails</p>
   </section>

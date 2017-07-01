@@ -100,6 +100,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.5)
+    high_voltage (3.0.0)
     i18n (0.8.4)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   flutie
+  high_voltage
   jbuilder (~> 2.5)
   launchy
   mysql2
@@ -300,4 +302,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.6
+   1.15.1

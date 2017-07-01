@@ -2,6 +2,7 @@ ms:
   application:
     footer:
       about: "Tentang"
+      faq: "FAQ"
     shared:
       preview:
         title: "Info Derma"
