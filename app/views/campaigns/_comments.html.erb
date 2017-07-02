@@ -1,3 +1,7 @@
 <div id="tab-comments">
-  <div class="fb-comments" data-href="<%= request.url %>" data-numposts="5" data-width="653"></div>
+  <div class="fb-comments"
+       data-href="<%= "#{ENV.fetch("PUBLIC_URL")}#{request.path_info}" %>"
+       data-numposts="5"
+       data-width="653">
+  </div>
 </div>
