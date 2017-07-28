@@ -13,6 +13,8 @@ gem "delayed_job_active_record"
 gem "flutie"
 gem "high_voltage"
 gem "jbuilder", "~> 2.5"
+gem "mina"
+gem "mina-delayed_job", require: false
 gem "mysql2"
 gem "omniauth-facebook"
 gem "puma", "~> 3.7"
