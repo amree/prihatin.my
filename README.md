@@ -1,5 +1,22 @@
 # README
 
+## Deployment
+
+### First deployment
+
+    mina setup
+    vi prihatin/shared/env
+
+In local development, run this command:
+
+    mina deploy
+
+After that, we need to manually start the app for the first time:
+
+    cd prihatin/current
+    for LINE in `cat /home/amree/prihatin/shared/env`; do export $LINE; done
+    ./bin/pumactl -F config/puma.rb start
+
 ## Development Setup
 
 * Copy `.env` to `.env.local` and modified it as necessary
