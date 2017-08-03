@@ -1,0 +1,17 @@
+.devise-sessions-new {
+  .login-instruction {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: $size-lg) {
+  .devise-sessions-new {
+    .login-instruction {
+      margin-bottom: 13rem;
+      margin-top: 15rem;
+    }
+  }
+}

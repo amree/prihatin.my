@@ -1,5 +1,7 @@
 ms:
   application:
+    header:
+      login: "Masuk"
     footer:
       about: "Tentang"
       faq: "FAQ"
