@@ -18,7 +18,7 @@ gem "mina-delayed_job", require: false
 gem "mysql2"
 gem "omniauth-facebook"
 gem "puma", "~> 3.7"
-gem "rails", "~> 5.1.1"
+gem "rails", "~> 5.1.3"
 gem "sassc-rails"
 gem "sass-rails", "~> 5.0"
 gem "sentry-raven"
