@@ -45,3 +45,11 @@
     </tbody>
   </table>
 </div>
+
+<% content_for :javascript do %>
+  <script>
+    $(function() {
+      analytics.page('Donation', { currency: 'MYR', value: <%= preview.total_amount %> });
+    })
+  </script>
+<% end %>
