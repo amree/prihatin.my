@@ -45,6 +45,7 @@
 <% content_for :javascript do %>
   <script>
     $(function() {
+      new window.Derma.FacebookShare().initialize();
       new window.Derma.ClipboardCopy(".js-copy-url", ".copy-url-status").initialize();
     })
   </script>

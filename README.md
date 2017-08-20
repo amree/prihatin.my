@@ -17,6 +17,8 @@ After that, we need to manually start the app for the first time:
     for LINE in `cat /home/amree/prihatin/shared/env`; do export $LINE; done
     ./bin/pumactl -F config/puma.rb start
 
+    ./bin/puma -C config/puma.rb -d
+
 ## Development Setup
 
 * Copy `.env` to `.env.local` and modified it as necessary
