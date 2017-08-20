@@ -9,6 +9,7 @@ end
 gem "autoprefixer-rails"
 gem "devise"
 gem "billplz-api"
+gem "daemons"
 gem "delayed_job_active_record"
 gem "flutie"
 gem "high_voltage"
