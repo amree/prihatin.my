@@ -89,7 +89,7 @@ class DonationForm
       begin
         Billplz::Bill.create(
           collection_id: campaign.billplz_collection_id,
-          email: "hello@derma.asia",
+          email: "hello@prihatin.my",
           name: campaign.title,
           amount: (total_amount * 100).to_s,
           callback_url: callback_url,
