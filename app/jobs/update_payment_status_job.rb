@@ -6,6 +6,10 @@ class UpdatePaymentStatusJob < ApplicationJob
 
     payment = Payment.find_by(gateway_reference: gateway_reference)
 
+    Billplz.configure do |config|
+      config.api_key = payment.donation.campaign.organizer.billplz_api_key
+    end
+
     if payment.state == Payment::DUE
       bill = Billplz::Bill.find(id: gateway_reference)
 
