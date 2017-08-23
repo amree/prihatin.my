@@ -1,6 +1,7 @@
 require "mina/rails"
 require "mina/git"
 require "mina/rbenv"
+require "mina/delayed_job"
 
 set :application_name, "prihatin"
 set :domain, "prihatin.my"
@@ -42,9 +43,12 @@ task :deploy do
     invoke :"deploy:cleanup"
 
     on :launch do
+      invoke :env
+
       in_path(fetch(:current_path)) do
         command %{touch tmp/restart.txt}
       end
+      invoke :'delayed_job:restart'
     end
   end
 end
